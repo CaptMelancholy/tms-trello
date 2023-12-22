@@ -1,0 +1,408 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* PREPARTION */
+
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  color: #222;
+  position: relative;
+  height:100%;
+}
+
+.hide {
+  display: none;
+}
+
+.wrapper {
+  max-width: 1920px;
+  padding: 0 24px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.root-wrapper {
+  display: flex;
+  gap: 24px;
+  padding: 20px 0;
+  max-width: 1920px;
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+  scroll-snap-type: x;
+  scroll-snap-stop: always;
+  height: 100%;
+}
+
+.header {
+  background-color: #f5f5f5;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.header__logo {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.header__logo__title {
+  color: #007ac0;
+  font-family: Raleway;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.header__clocks {
+  border-radius: 10px;
+  padding: 5px 20px;
+  box-shadow: 1px 1px 20px 3px #007ac0;
+}
+
+#header__clocks__content {
+  color: #007ac0;
+  font-family: Raleway;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+#root {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  height: 100%;
+}
+
+.field__add-button__button {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 7px 10px;
+  align-items: center;
+  background: #00c2e0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.field__add-button__button-title {
+  color: #fff;
+  font-family: Noto Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.field__list {
+  width: 300px;
+  border-radius: 16px;
+  border: 1px solid #d9d9d9;
+  background: #f5f5f5;
+  padding: 16px 24px;
+  height: 100%;
+}
+
+.field__list > :not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.field__list-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field__list-nav__title {
+  background-color: transparent;
+  color: #000;
+  font-family: Noto Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.field__list-nav__control {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.field__list-nav__control:hover {
+  background-color: #eeeded;
+  border-radius: 2px;
+}
+
+.field__list-add {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.field__list-cards__card-identificators {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 5px;
+  margin-bottom: 15px;
+}
+
+.identity {
+  font-family: Noto Sans;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  mix-blend-mode: multiply;
+  color: white;
+  padding: 2px 5px;
+  border-radius: 10px;
+}
+
+.field__list-cards-card-control {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+
+.field__list-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scroll-snap-type: x;
+  scroll-snap-stop: always;
+  overflow-x: hidden;
+  max-height: 70vh;
+}
+
+.field__list-cards__card {
+  border-radius: 8px;
+  background: #d9d9d9;
+  padding: 12px 8px;
+}
+
+.field__list-cards__card-info-title {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.field__list-cards__card-footer {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.field__list-add > p {
+  color: #000;
+  font-family: Noto Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.card_move {
+  position: absolute;
+  z-index: 1000;
+  width: 300px;
+}
+
+.hide {
+  display: none;
+}
+
+.field__list-cards__adding-card {
+  border-radius: 8px;
+  background: #d9d9d9;
+  padding: 12px 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-for-card,
+.title-for-card,
+.select-for-card {
+  border-radius: 2px;
+  font-size: 14px;
+  padding: 10px 2px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.field__list-cards__card__add {
+  background-color: #007ac0;
+  color: white;
+  border-radius: 10px;
+  padding: 15px 0;
+  width: 50%;
+  font-size: 14px;
+  transition: 0.3s ease-in-out;
+}
+
+.field__list-cards__card__add:hover {
+  background-color: #006098;
+  box-shadow: 0 0 20px 3px black;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+
+.modal {
+  background-color: #d9d9d9;
+  padding: 30px 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  z-index: 1000;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 20px;
+}
+
+.modal-header-button {
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+.modal-input {
+  padding: 10px 5px;
+}
+
+.modal-submit {
+  width: 75%;
+  padding: 10px 0;
+  background-color: #006098;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .modal {
+    width: 50%;
+  }
+  
+  
+  .modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin: 5px 10px;
+  }
+  
+  .modal-header-button {
+    padding: 2px 5px;
+  }
+  
+  .modal-submit {
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 75%;
+  }
+  
+}
+
+.red-border {
+  border: 2px solid red !important;
+}

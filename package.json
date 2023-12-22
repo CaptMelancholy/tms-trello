@@ -1,0 +1,27 @@
+{
+  "name": "tms-trello",
+  "version": "0.9.1",
+  "description": "Trello Clone on Vanila JS + CSS",
+  "source": "src/index.html",
+  "scripts": {
+    "dev": "parcel src/index.html --no-cache",
+    "build": "parcel build",
+    "pro": "parcel build src/index.html --no-source-maps --no-cache --public-url .",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaptMelancholy/tms-trello.git"
+  },
+  "author": "Artyom Danko (@CaptMelancholy)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CaptMelancholy/tms-trello/issues"
+  },
+  "homepage": "https://github.com/CaptMelancholy/tms-trello#readme",
+  "devDependencies": {
+    "gh-pages": "^6.1.0",
+    "parcel": "^2.10.3"
+  }
+}
